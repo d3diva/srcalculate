@@ -6,29 +6,10 @@
   <div class="form-inputs">
     <%= f.input :custname %>
     <%= f.input :billno %>
-    <%= f.input :bdate %>
+    <%= f.input :billdt %>
   </div>
-
-  <table class='table'>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Product Name</th>
-        <th>Qty</th>
-        <th>Rate</th>
-      </tr>
-    </thead>
-    <tbody class='products'>
-      <%= f.simple_fields_for :products do |builder| %>
-        <%= render 'product_fields', f: builder %>
-      <% end %>
-    </tbody>
-
-  </table>
 
   <div class="form-actions">
     <%= f.button :submit %>
-    <%= link_to_add_association 'Add Product', f, :products, class: 'btn btn-primary', data: { association_insertion_node: '.products', association_insertion_method: :append } %>
   </div>
 <% end %>
- 
