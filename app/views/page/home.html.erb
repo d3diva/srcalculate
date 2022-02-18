@@ -1,2 +1,9 @@
-<h1>Page#home</h1>
-<p>Find me in app/views/page/home.html.erb</p>
+<% provide(:title, 'Home') %>
+<h1>Home</h1>
+
+
+<a href="#"
+  data-reflex="click->Counter#increment"
+  data-step="1" 
+  data-count="<%= @count.to_i %>"
+> Increment <%= @count.to_i %></a>
