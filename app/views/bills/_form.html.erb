@@ -9,7 +9,36 @@
     <%= f.input :billdt %>
   </div>
 
+  <table class='table'>
+    <thead>
+      <tr>
+        <th></th>
+        <th class="col-3">Product</th>
+        <th class="col-2">Rate</th>
+        <th class="col-1">Qty</th>
+        <th class="col-2">Amount</th>
+      </tr>
+    </thead>
+    <tbody class='products'>
+      <%= f.simple_fields_for :products do |builder| %>
+        <%= render 'product_fields', f: builder %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <table class='table'>
+    <tr>
+      <td class="col-3" ></td>
+      <td class="col-2" ></td>
+      <td class="col-1" ></td>
+      <td class="col-2" ></td>
+      <td>Total</td>
+    </tr>
+  </table>
+
   <div class="form-actions">
+    <%= link_to_add_association 'Add Product', f, :products, class: 'btn btn-primary', data: { association_insertion_node: '.products', association_insertion_method: :append } %>
     <%= f.button :submit %>
+    
   </div>
 <% end %>
