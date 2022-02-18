@@ -3,9 +3,9 @@
     <%= link_to_remove_association "X", f, class: 'btn btn-danger btn-xs' %>
   </td>
   <td><%= f.input :prodname, label: false %></td>
-  <td><%= f.input :qty, label: false %></td>
+  <td><%= f.input :qty, label: false, {data-reflex="input->Sum#words"} %></td>
   <td><%= f.input :rate, label: false %></td>
   <td></td>
-  <td></td>
+  <td>@words</td>
   <td></td>
 </tr>
