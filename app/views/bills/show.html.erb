@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Custname:</strong>
+  <%= @bill.custname %>
+</p>
+
+<p>
+  <strong>Billno:</strong>
+  <%= @bill.billno %>
+</p>
+
+<p>
+  <strong>Billdt:</strong>
+  <%= @bill.billdt %>
+</p>
+
+<table class = "table">
+  <thead>
+    <tr>
+      <th class="col-3" >Product Name</th>
+      <th class="col-2" >Qty No.</th>
+      <th class="col-2" >Rate Amt</th>
+      <th class="col-2" > Amount </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.prodname %></td>
+        <td><%= product.qty %></td>
+        <td><%= product.rate %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table class='table'>
+    <tr>
+      <td class="col-3" ></td>
+      <td class="col-2" ></td>
+      <td class="col-1" ></td>
+      <td class="col-2" ></td>
+      <td>Total</td>
+    </tr>
+  </table>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

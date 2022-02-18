@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prodname: MyString
+  qty: MyString
+  rate: MyString
+  bill: one
+
+two:
+  prodname: MyString
+  qty: MyString
+  rate: MyString
+  bill: two
