@@ -7,3 +7,12 @@
   data-step="1" 
   data-count="<%= @count.to_i %>"
 > Increment <%= @count.to_i %></a>
+
+<br>
+
+<form>
+  <input type="text" data-reflex="input->Calc#sum" autofocus="true" placeholder="Type an integer"><br>
+  times<br>
+  <input type="text" name="multiplier" value="5">
+</form>
+<p>Result: <span id="result"></span></p>
